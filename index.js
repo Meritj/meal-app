@@ -18,13 +18,12 @@ function mealsDisplay() {
     if (meals === null) {
         result.innerHTML = ` <h2> Aucun résultat </h2> `
     } else {
-        meals.length = 12; // ici on limite le nombre de plats à 12.
-
+        meals.length = 12;
         result.innerHTML = meals.map(
-            (meal) => { // si ont mes des acolades dans un map, il faut écrire un return, grâce à eux on peut mettre une logique
+            (meal) => { 
                 let ingredients = [];
                 for (i = 1; i < 21; i++){
-                   if (meal[`strIngredient${i}`]){ // ici on va tester les strIngredients (true de base)
+                   if (meal[`strIngredient${i}`]){ 
                     let ingredient = meal[`strIngredient${i}`];
                     let measure = meal[`strMeasure${i}`];
 
